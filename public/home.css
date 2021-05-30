@@ -1,5 +1,5 @@
 body {
-    background: url("https://wallpapercave.com/wp/0l0kzYB.jpg") no-repeat center center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 155, 0.4), rgba(241, 241, 110, 0.3)),url("https://wallpapercave.com/wp/0l0kzYB.jpg") no-repeat center center/cover fixed;
     background-size: cover;
 }
 
@@ -231,7 +231,7 @@ body {
     border-radius: 10px;
    margin: auto;
    text-align: center;
-    background:rgba(140,110,220,.2);
+    background:rgba(255,254,255,0.9);
     margin-top: 2rem;
   }
   
