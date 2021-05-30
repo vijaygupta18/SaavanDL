@@ -1,8 +1,8 @@
 {
-  "name": "saavandownload",
+  "name": "saavandownloader",
   "version": "1.0.0",
-  "description": "",
-  "main": "saavan.js",
+  "description": "A web app to download music from saavan",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
@@ -13,6 +13,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "vijay",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaygupta18/Saavan-Music-Downloader.git"
+  },
+  "keywords": [
+    "saavan"
+  ],
+  "author": "Vijay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijaygupta18/Saavan-Music-Downloader/issues"
+  },
+  "homepage": "https://github.com/vijaygupta18/Saavan-Music-Downloader#readme"
 }
