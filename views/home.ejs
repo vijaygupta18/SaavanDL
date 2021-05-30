@@ -14,7 +14,8 @@
     </style>
 </head>
 <body>
-    
+    <br><br>
+    <h3 class="head"> Saavan Song Downloader</h3>
     <div class="ani">
         <div class="ani-cover">
             <span class="ani-text"></span>
@@ -33,9 +34,10 @@
   
 
 <% if(songs!=""){ %>
+    <div class="box">
    <%for(let s in songs){ %>
        <% if(songs[s]!=undefined){ %>
-    <li><%=songs[s].song %></li>
+    <!-- <li><%=songs[s].song %></li> -->
     <div class="card">
         <img src="<%=songs[s].thumbnail %>" style="width: 150px;height: 150px;margin: auto;margin-top: 20px;border-radius: 10px;" alt="Avatar" style="width:100%">
         <div class="container">
@@ -47,6 +49,7 @@
       </div>
      <%  }%>
     <% }%>
+    </div>
     <% }
     %>
 </body>

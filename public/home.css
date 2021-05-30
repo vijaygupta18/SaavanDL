@@ -6,11 +6,12 @@ body {
 .b2 {
     position: relative;
     height: fit-content;
-    font-size: 5rem;
+    font-size: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 55%;
+    margin-top: -6%;
 }
 
 .ani {
@@ -23,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    width: 32rem;
+    width: 3rem;
     margin-left: 12vw;
 }
 
@@ -41,7 +42,7 @@ body {
     color: rgba(250, 250, 250, 0.8);
     animation: animate 2.5s linear infinite;
     letter-spacing: 8px;
-    backdrop-filter: blur(4px);
+    margin-top: -6rem;
     border-radius: .8rem;
 }
 
@@ -50,7 +51,7 @@ body {
         height: 0;
     }
     70%, 90% {
-        height: 60.6rem;
+        height: 25.6rem;
     }
 }
 
@@ -96,7 +97,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
     width: 8rem;
-    height: 3.5rem;
+    height: 3rem;
     font-size: 1.8rem;
     line-height: 1;
     letter-spacing: 1px;
@@ -104,7 +105,7 @@ body {
 }
 
 .button:hover {
-    background: rgb(50 152 220 / 0.5);
+    background:rgb(0, 123, 206);
     transition: .3s;
     transform: scale(1.08);
 }
@@ -151,7 +152,7 @@ body {
     }
     @keyframes animate {
         70%, 90% {
-            width: 44vw;
+            width: 40vw;
         }
     }
 }
@@ -160,6 +161,10 @@ body {
     .input {
         width: 50vw;
     }
+        .head{
+            width: 16rem;
+        }
+    
     .ani-cover {
         width: 45vw;
     }
@@ -175,6 +180,9 @@ body {
         width: 45vw;
         padding-left: 0%;
 
+    }
+    .head{
+        width: 16rem;
     }
     .button{
         width: 6rem;
@@ -192,7 +200,9 @@ body {
 }
 
 @media screen and (max-width:320px) {
-    
+    .head{
+        width: 16rem;
+    }
     .input {
         width: 70vw;
     }
@@ -217,13 +227,11 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 10px;
    margin: auto;
    text-align: center;
-    background: white;
+    background:rgba(140,110,220,.2);
     margin-top: 2rem;
   }
   
@@ -259,3 +267,26 @@ body {
     transition: .3s;
     transform: scale(1.08);
 }
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .head{
+    
+      color: white;
+      text-align: center;
+      border: 2px solid rgba(247, 241, 241, 0.8);
+      border-radius: 10px;
+      font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 20px 0px rgba(255, 254, 250, 0.8);
+    width: 18rem;
+    height: 3rem;
+    align-items: center;
+    margin: auto;
+    line-height: 2.5;
+    letter-spacing: 1px;
+   
+     }
+     
