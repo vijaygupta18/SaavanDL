@@ -83,7 +83,7 @@ body {
 }
 
 .input::placeholder {
-    font-family: FontAwesome, 'Open Sans';
+    font-family:'Open Sans';
 }
 
 .button {
