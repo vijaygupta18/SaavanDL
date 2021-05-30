@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-var port = process.env.PORT || 3009;
+var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
 
@@ -102,7 +102,6 @@ function helper(data){
   
 
 
-
-  app.listen(process.env.PORT || 80, () => {
-    console.log("Server started");
-  });
+  app.listen(port, () => {
+    console.log(`Server Started at http://localhost:${port}`)
+  })
