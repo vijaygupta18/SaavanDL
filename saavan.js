@@ -33,8 +33,8 @@ app.post("/:song", (req, res) => {
     var name = req.params.song;
     // console.log(typeof(name))
 
-    grab(name);
     console.log(name)
+    grab(name);
     async function grab(name){
       var songs=  await songgrabber(name)
       for (let s=0;s<songs.length;s++) {
