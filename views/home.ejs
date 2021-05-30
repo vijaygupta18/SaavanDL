@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Yusei+Magic&display=swap');
+        
+    </style>
+</head>
+<body>
+    
+    <div class="ani">
+        <div class="ani-cover">
+            <span class="ani-text"></span>
+
+        </div>
+    </div>
+    <form action="/" method="POST">
+    <div class="b2">
+        <div class="input-btn-cover">
+            <input class="input" name="song" type="text" placeholder="  Enter Your Song">
+            <button id="btn" type="submit" class="button is-info" >Search</button>
+        </div>
+    </div>
+</form>
+
+  
+
+<% if(songs!=""){ %>
+   <%for(let s in songs){ %>
+       <% if(songs[s]!=undefined){ %>
+    <li><%=songs[s].song %></li>
+    <div class="card">
+        <img src="<%=songs[s].thumbnail %>" style="width: 150px;height: 150px;margin: auto;margin-top: 20px;border-radius: 10px;" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Title:<%=songs[s].song %></b></h4> 
+          <p>Artist:<%=songs[s].singers %></p> 
+          <a href="<%=songs[s].url %>"class="down"">Download</a>
+          <br>
+        </div>
+      </div>
+     <%  }%>
+    <% }%>
+    <% }
+    %>
+</body>
+</html>
