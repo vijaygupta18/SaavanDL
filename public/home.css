@@ -1,5 +1,8 @@
 body {
-    background: linear-gradient(rgba(0, 0, 155, 0.4), rgba(241, 241, 110, 0.3)),url("https://wallpapercave.com/wp/0l0kzYB.jpg") no-repeat center center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 155, 0.4), rgba(241, 241, 110, 0.3)),url("https://wallpapercave.com/wp/0l0kzYB.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
