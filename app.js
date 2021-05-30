@@ -18,6 +18,11 @@ app.get("/", (req, res) => {
     res.render("home",{songs:songs});
  
   });
+  app.get("/favicon.ico", (req, res) => {
+    songs="" 
+      res.render("home",{songs:songs});
+   
+    });
 
 app.post("/", (req, res) => {
     let song = req.body.song;
