@@ -16,7 +16,7 @@ Tech Stack Used:
 
 - Click on Search 
 
-- Click on the downloadable file
+- Click on the download Button.
 
 ScreenShots
 
