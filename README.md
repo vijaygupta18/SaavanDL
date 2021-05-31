@@ -20,7 +20,7 @@ Tech Stack Used:
 
 ScreenShots
 
-[!1st](public/1.gif)
+![1st](public/1.gif)
 
 
 
