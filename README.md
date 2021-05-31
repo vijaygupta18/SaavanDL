@@ -20,9 +20,8 @@ Tech Stack Used:
 
 ScreenShots
 
-[!1st](public/1.JPG)
+[!1st](public/1.gif)
 
-[!2nd](public/2.JPG
 
 
 😄
