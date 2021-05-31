@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const express = require('express')
 const bodyParser = require("body-parser");
 const app = express()
+var cors = require('cors')
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
   extended: true
@@ -9,8 +10,7 @@ app.use(bodyParser.urlencoded({
 var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
-
-
+app.use(cors())
 // frontend backend connection
 
 app.get("/", (req, res) => {
