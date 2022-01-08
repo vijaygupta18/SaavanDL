@@ -15,7 +15,12 @@ app.use(cors())
 
 app.get("/", (req, res) => {
   songs="" 
-    res.render("home",{songs:songs});
+    res.render("index");
+ 
+  });
+app.get("/home", (req, res) => {
+  songs="" 
+    res.render("home");
  
   });
   // app.get("/favicon.ico", (req, res) => {
@@ -25,88 +30,46 @@ app.get("/", (req, res) => {
   //   });
 
 app.post("/", (req, res) => {
-    let song = req.body.song;
-    if (song === "") res.redirect("/"); 
-    else res.redirect("/songname/"+song);
+    let user = req.body.username;
+    let pass = req.body.pass;
+    if (user === "vijaygupta18" && pass==="fasalapp") res.redirect("/home"); 
+    else res.redirect("/");
   })
-app.post("/:song", (req, res) => {
-    let song = req.body.song;
-    res.redirect("/songname/"+song);
+app.post("/search", (req, res) => {
+    let movie = req.body.moviename;
+    // console.log(movie)
+    res.redirect("/movie/"+movie);
   })
 
-  app.get("/songname/:song", (req, res) => {
-    var name = req.params.song;
+  app.get("/movie/:moviename", (req, res) => {
+    var name = req.params.moviename;
     // console.log(typeof(name))
 
-    console.log(name)
+    // console.log(name)
     grab(name);
     async function grab(name){
-      var songs=  await songgrabber(name)
-      for (let s=0;s<songs.length;s++) {
-        if(songs[s]!=undefined)
-        console.log(songs[s].song);}
-      res.render("home",{songs:songs});
+      var movies=  await moviegrabber(name)
+      for (let s=0;s<movies.length;s++) {
+        if(movies[s]!=undefined)
+        console.log(movies[s]);}
+      res.render("home",{movies:movies});
 
     }
-  async function songgrabber(songname) {
+  async function moviegrabber(moviename) {
   try{
-    let url = "https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query=" + songname;
+    let url = "https://www.omdbapi.com/?s="+moviename+"&apikey=afd6951f";
     var response = await fetch(url) //RUN RUN RUN
     var resdata = await response.json();
-    var songdata = resdata['songs']['data']
-    var songids = []
-    var songs=[]
-    
-    for (let index = 0; index < songdata.length; index++) {
-        const id = songdata[index]['id'];
-        songids.push(id)
-    }
-    // console.log(songids)
-    for(var i=0;i<songids.length;i++){
-        let song= await singleidurl(songids[i])
-        if(song!=undefined)
-        songs.push(song);
-    }
-    return songs
+    // console.log(resdata);
+    var moviedata = resdata['Search']
+   
+  
+    return moviedata;
   }catch (error) {}
   }
-
-
-async function singleidurl(id){
-  try{
-    let url = "https://www.jiosaavn.com/api.php?__call=song.getDetails&cc=in&_marker=0%3F_marker%3D0&_format=json&pids=" + id
-    let response = await fetch(url)
-    let resdata = await response.json()
-    return helper(resdata[id])
-  }catch (error) {}
-}
-
-
-
-function helper(data){
-  try{
-        if('media_preview_url' in data){
-           var url = data['media_preview_url'];
-           url = url.replace('preview', 'aac');
-        }
   
-        if(data['320kbps'] == 'true'){
-            url = url.replace("_96_p.mp4", "_320.mp4")
-        }
-        else{
-            url = url.replace("_96_p.mp4", "_160.mp4")
-        }
-        var dict = { 'song': data['song'], 'singers': data['singers'],'thumbnail':data['image'] ,'url': url}
-        return dict
-      }catch (error) {}
-}
-
-    
-    
   })
   
-
-
   app.listen(port, () => {
     console.log(`Server Started at http://localhost:${port}`)
   })
