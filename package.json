@@ -1,5 +1,5 @@
 {
-  "name": "Movie Search",
+  "name": "moviesearch",
   "version": "1.0.0",
   "description": "A web app to Login and Search Movies",
   "main": "app.js",
@@ -24,8 +24,5 @@
   ],
   "author": "Vijay",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": ""
 }
