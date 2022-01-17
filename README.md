@@ -4,10 +4,10 @@
 
 Tech Stack Used:
 
--NodeJs
--ExpressJs
--EJS
--CSS
+- NodeJs
+- ExpressJs
+- EJS
+- CSS
 
 
 - [Visit App Here](https://saavandownload.herokuapp.com/)
